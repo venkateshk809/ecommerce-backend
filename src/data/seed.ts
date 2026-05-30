@@ -1,5 +1,4 @@
-require("dotenv").config();
-
+import "../config/env";
 import mongoose from "mongoose";
 import { products } from "./products";
 
