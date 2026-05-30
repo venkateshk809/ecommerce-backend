@@ -5,7 +5,8 @@
   "main": "dist/server.js",
   "scripts": {
     "dev": "nodemon --exec ts-node src/server.ts",
-    "seed": "ts-node src/data/seed.ts",
+    "seed:dev": "cross-env NODE_ENV=development ts-node src/data/seed.ts",
+    "seed:qa": "cross-env NODE_ENV=qa ts-node src/data/seed.ts",
     "build": "tsc",
     "start": "node dist/server.js"
   },
@@ -22,6 +23,7 @@
     "@types/cors": "^2.8.19",
     "@types/express": "^5.0.6",
     "@types/node": "^25.9.1",
+    "cross-env": "^10.1.0",
     "nodemon": "^3.1.14",
     "ts-node": "^10.9.2",
     "typescript": "^6.0.3"
